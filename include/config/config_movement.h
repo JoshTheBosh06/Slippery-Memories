@@ -7,7 +7,7 @@
 /**
  * Changes Mario's ground turn radius by making it dependent on the analog stick magnitude and speed.
  */
-// #define VELOCITY_BASED_TURN_SPEED
+#define VELOCITY_BASED_TURN_SPEED
 
 /**
  * Allows Mario to easily side flip when moving forwards at any speed.
@@ -26,7 +26,7 @@
  * - Precise turning control.
  * - Prevents falling from the edges.
  */
-// #define BETTER_HANGING
+#define BETTER_HANGING
 
 /**
  * Change the movement speed when hanging from a ceiling (the vanilla value is 4.0f, has no effect if BETTER_HANGING is enabled).
@@ -61,7 +61,7 @@
 /**
  * Disables Mario getting stuck in snow and sand when falling.
  */
-// #define NO_GETTING_BURIED
+#define NO_GETTING_BURIED
 
 /**
  * Prevents hands-free holding.
@@ -81,12 +81,12 @@
 /**
  * If A and Z are pressed on the same frame while running, Mario will long jump instead of ground pound.
  */
-// #define EASIER_LONG_JUMPS
+#define EASIER_LONG_JUMPS
 
 /**
  * Enables the ability to hold Z while twirling to descend faster.
  */
-// #define Z_TWIRL
+#define Z_TWIRL
 
 /**
  * Disables bonks when ground pounding next to a wall.
@@ -101,12 +101,12 @@
 /**
  * Allows Mario to grab hangable ceilings from any state.
  */
-// #define HANGING_FIX
+#define HANGING_FIX
 
 /**
  * The maximum angle the player can wall kick, in degrees. 0..90. To allow 45 degree wall kicks, you must supply `46` to allow 45 and under.
  */
-#define WALL_KICK_DEGREES 45
+#define WALL_KICK_DEGREES 46
 
 /**
  * Makes Mario unable to ledge grab steep slopes to prevent false ledge grabs.
@@ -116,7 +116,7 @@
 /**
  * Buffers an A input if you jump off a slope during the landing lag
  */
-// #define SLOPE_BUFFER
+#define SLOPE_BUFFER
 
 /**
  * Disables BLJs and crushes SimpleFlips's dreams.
@@ -146,4 +146,4 @@
  * These require Platform Displacement 2 to be enabled.
  */
 #define MARIO_INERTIA_UPWARD
-// #define MARIO_INERTIA_LATERAL
+#define MARIO_INERTIA_LATERAL
