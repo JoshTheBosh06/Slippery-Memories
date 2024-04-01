@@ -56,6 +56,10 @@ u8 final2;
  u16 timerFracSecsRH;
  u8 ranksRH;
 
+ u8 timerSecsPass;
+ u8 timerSecsPass1;
+ u8 timerSecsPass2;
+
 /**************************************************
  *                    ANIMATIONS                  *
  **************************************************/

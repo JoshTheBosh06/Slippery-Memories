@@ -28,6 +28,10 @@ extern u16 timerSecsRH;
 extern u16 timerFracSecsRH;
 extern u8 ranksRH;
 
+extern u8 timerSecsPass;
+extern u8 timerSecsPass1;
+extern u8 timerSecsPass2;
+
 s32 is_anim_at_end(struct MarioState *m);
 s32 is_anim_past_end(struct MarioState *m);
 s16 set_mario_animation(struct MarioState *m, s32 targetAnimID);

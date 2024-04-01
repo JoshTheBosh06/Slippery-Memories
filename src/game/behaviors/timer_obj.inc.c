@@ -8,6 +8,7 @@ void timer_1_start(void) {
     switch (o->oAction) {
         case 0:
                 print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(300), 209, "TIME");
+                print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(230), 209, "|");
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(241), 209, "%0d", timerMinsr);
     if (timerMinsr < 10) {
         print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(219), 209, "%02d", timerSecsr);
@@ -87,6 +88,7 @@ void timer_2_start() {
     switch (o->oAction) {
         case 0:
                 print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(300), 209, "TIME");
+                print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(230), 209, "|");
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(241), 209, "%0d", timerMins64);
     if (timerMinsr < 10) {
         print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(219), 209, "%02d", timerSecs64);
@@ -162,6 +164,7 @@ void timer_3_start(void) {
     switch (o->oAction) {
         case 0:
                 print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(300), 209, "TIME");
+                print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(230), 209, "|");
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(241), 209, "%0d", timerMinsRH);
     if (timerMinsr < 10) {
         print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(219), 209, "%02d", timerSecsRH);

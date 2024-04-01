@@ -162,6 +162,7 @@ Gfx *geo_exec_cake_end_screen(s32 callContext, struct GraphNode *node, UNUSED Ma
 
     // Retro
     print_text_fmt_int(135, 125, "%d", timerMinsr);
+    print_text(145, 125, "|");
     print_text_fmt_int(155, 125, "%02d", timerSecsr);
 
     switch (ranksr) {
@@ -190,6 +191,7 @@ Gfx *geo_exec_cake_end_screen(s32 callContext, struct GraphNode *node, UNUSED Ma
 
     // 64 to Galaxy
     print_text_fmt_int(135, 92, "%d", timerMins64);
+    print_text(145, 92, "|");
     print_text_fmt_int(155, 92, "%02d", timerSecs64);
 
     switch (ranks64) {
@@ -218,6 +220,7 @@ Gfx *geo_exec_cake_end_screen(s32 callContext, struct GraphNode *node, UNUSED Ma
 
     // Romhack Mix
     print_text_fmt_int(135, 61, "%d", timerMinsRH);
+    print_text(145, 61, "|");
     print_text_fmt_int(155, 61, "%02d", timerSecsRH);
 
     switch (ranksRH) {

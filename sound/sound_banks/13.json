@@ -201,6 +201,11 @@
             "release_rate": 10,
             "envelope": "envelope7",
             "sound": "0A_tambourine"
+        },
+        "inst14": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "2F_sleigh_bells"
         }
         
     },
@@ -218,6 +223,7 @@
         "inst10",
         "inst11",
         "inst12",
-        "inst13"
+        "inst13",
+        "inst14"
     ]
 }

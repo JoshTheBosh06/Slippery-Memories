@@ -18,7 +18,7 @@ extern u8 wf_dl__1_pal_rgba16[];
 extern u8 wf_dl__2_ci4[];
 extern u8 wf_dl__2_pal_rgba16[];
 extern u8 wf_dl__8_rgba16[];
-extern u8 wf_dl__12_rgba16[];
+extern u8 wf_dl__12_ia16[];
 extern u8 wf_dl_Ground002_i4[];
 extern u8 wf_dl_NEWON0E223dark_i4[];
 extern u8 wf_dl_parplehanataba2_ci8[];
