@@ -27,6 +27,7 @@ const LevelScript level_ending_entry[] = {
     ALLOC_LEVEL_POOL(),
 
     AREA(/*index*/ 1, ending_geo_area_1),
+    OBJECT(MODEL_NONE, -3484, -1889, -4070, 0, 0, 0, 0x00000000, bhvEndScreenStrings),
     END_AREA(),
 
     FREE_LEVEL_POOL(),

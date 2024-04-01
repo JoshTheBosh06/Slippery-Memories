@@ -5,6 +5,28 @@
 
 #include "macros.h"
 #include "types.h"
+extern u8 final;
+extern u8 final1;
+extern u8 final2;
+// Retro Level
+extern u16 timerMinsr;
+extern u16 timerSecsr;
+extern u16 timerFracSecsr;
+extern u8 ranksr;
+extern u8 x;
+extern u8 index;
+
+// 64 and onward
+extern u16 timerMins64;
+extern u16 timerSecs64;
+extern u16 timerFracSecs64;
+extern u8 ranks64;
+
+// Romhack level
+extern u16 timerMinsRH;
+extern u16 timerSecsRH;
+extern u16 timerFracSecsRH;
+extern u8 ranksRH;
 
 s32 is_anim_at_end(struct MarioState *m);
 s32 is_anim_past_end(struct MarioState *m);

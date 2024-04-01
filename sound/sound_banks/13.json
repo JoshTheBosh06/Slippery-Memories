@@ -160,30 +160,64 @@
         "inst5": {
             "release_rate": 10,
             "envelope": "envelope6",
-            "sound": "26_crystal_rhodes"
+            "sound": "1A_slap_bass"
         },
         "inst6": {
             "release_rate": 10,
             "envelope": "envelope7",
             "sound": "26_crystal_rhodes"
+        },
+        "inst7": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "1B_organ_2"
+        },
+        "inst8": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "44_grand_piano"
+        },
+        "inst9": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "27_harpsichord"
+        },
+        "inst10": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "20_cabasa"
+        },
+        "inst11": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "0D_clave"
+        },
+        "inst12": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "0C_conga_stick"
+        },
+        "inst13": {
+            "release_rate": 10,
+            "envelope": "envelope7",
+            "sound": "0A_tambourine"
         }
+        
     },
     "instrument_list": [
         "inst0",
         "inst1",
-        null,
-        null,
-        null,
-        null,
         "inst2",
-        null,
-        null,
-        null,
         "inst3",
         "inst4",
-        null,
-        null,
         "inst5",
-        "inst6"
+        "inst6",
+        "inst7",
+        "inst8",
+        "inst9",
+        "inst10",
+        "inst11",
+        "inst12",
+        "inst13"
     ]
 }

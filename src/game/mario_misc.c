@@ -86,17 +86,26 @@ struct GraphNodeObject gMirrorMario;  // copy of Mario's geo node for drawing mi
 /**
  * Geo node script that draws Mario's head on the title screen.
  */
+
+u16 secondsM = 0;
+u16 secondsT = 0;
+
 Gfx *geo_draw_mario_head_goddard(s32 callContext, struct GraphNode *node, UNUSED Mat4 *mtx) {
     Gfx *gfx = NULL;
-    struct GraphNodeGenerated *asGenerated = (struct GraphNodeGenerated *) node;
-
-    if (callContext == GEO_CONTEXT_RENDER) {
-        if (gPlayer1Controller->controllerData != NULL && !gWarpTransition.isActive) {
-            gd_copy_p1_contpad(gPlayer1Controller->controllerData);
-        }
-        gfx = (Gfx *) PHYSICAL_TO_VIRTUAL(gdm_gettestdl(asGenerated->parameter));
-        gGoddardVblankCallback = gd_vblank;
-        play_menu_sounds(gd_sfx_to_play());
+    secondsM++;
+    if (secondsM == 30) {
+        secondsT++;
+        secondsM = 0;
+    }
+    if (secondsT == 0) {
+        print_text_centered(160, 70, "^ PRESS START TO SLIDE ^");
+    }
+    if (secondsT == 1) {
+        print_text_centered(160, 70, "");
+    }
+    if (secondsT == 2) {
+        secondsM = 0;
+        secondsT = 0;
     }
     return gfx;
 }

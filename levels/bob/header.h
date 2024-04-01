@@ -31,4 +31,39 @@ extern const Trajectory bob_seg7_trajectory_koopa[];
 // script
 extern const LevelScript level_bob_entry[];
 
+#include "levels/bob/falling_platform_smb1/geo_header.h"
+
+#include "levels/bob/falling_platform_smb1/collision_header.h"
+
+
+#include "levels/bob/header.inc.h"
+
+#include "levels/bob/noteblock/geo_header.h"
+
+#include "levels/bob/noteblock/collision_header.h"
+
+#include "levels/bob/s_noteblock/geo_header.h"
+
+#include "levels/bob/s_noteblock/collision_header.h"
+
+#include "levels/bob/b_noteblock/geo_header.h"
+
+#include "levels/bob/prplant_mouthopen/geo_header.h"
+
+#include "levels/bob/prplant_mouthclosed/geo_header.h"
+
+#include "levels/bob/spring_bottom/geo_header.h"
+
+#include "levels/bob/spring_spring/geo_header.h"
+
+#include "levels/bob/spring_top/geo_header.h"
+
+#include "levels/bob/spring_top/collision_header.h"
+
+#include "levels/bob/spring_bottom/collision_header.h"
+
+#include "levels/bob/red_koopa_1/geo_header.h"
+
+#include "levels/bob/red_koopa_2/geo_header.h"
+
 #endif

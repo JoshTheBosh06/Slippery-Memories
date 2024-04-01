@@ -1074,6 +1074,10 @@ void check_main_menu_clicked_buttons(void) {
         }
     }
 
+    if (gPlayer1Controller->buttonPressed == START_BUTTON) {
+        sSelectedButtonID = MENU_BUTTON_PLAY_FILE_A;
+    }
+
     // Play sound of the save file clicked
     switch (sSelectedButtonID) {
         case MENU_BUTTON_PLAY_FILE_A:
@@ -1974,32 +1978,26 @@ void print_save_file_scores(s8 fileIndex) {
  * Prints file select strings depending on the menu selected.
  * Also checks if all saves exists and defines text and main menu timers.
  */
+
+u16 seconds = 0;
+u16 mseconds = 0;
+
 void print_file_select_strings(void) {
     create_dl_ortho_matrix();
-    switch (sSelectedButtonID) {
-        case MENU_BUTTON_NONE:         print_main_menu_strings();                               break;
-        case MENU_BUTTON_SCORE:        print_score_menu_strings(); sScoreFileCoinScoreMode = 0; break;
-        case MENU_BUTTON_COPY:         print_copy_menu_strings();                               break;
-        case MENU_BUTTON_ERASE:        print_erase_menu_strings();                              break;
-        case MENU_BUTTON_SCORE_FILE_A: print_save_file_scores(SAVE_FILE_A); break;
-        case MENU_BUTTON_SCORE_FILE_B: print_save_file_scores(SAVE_FILE_B); break;
-        case MENU_BUTTON_SCORE_FILE_C: print_save_file_scores(SAVE_FILE_C); break;
-        case MENU_BUTTON_SCORE_FILE_D: print_save_file_scores(SAVE_FILE_D); break;
-        case MENU_BUTTON_SOUND_MODE:   print_sound_mode_menu_strings();     break;
+    mseconds++;
+    if (mseconds == 30) {
+        seconds++;
+        mseconds = 0;
     }
-    // If all 4 save file exists, define true to sAllFilesExist to prevent more copies in copy menu
-    if (save_file_exists(SAVE_FILE_A) == TRUE && save_file_exists(SAVE_FILE_B) == TRUE &&
-        save_file_exists(SAVE_FILE_C) == TRUE && save_file_exists(SAVE_FILE_D) == TRUE) {
-        sAllFilesExist = TRUE;
-    } else {
-        sAllFilesExist = FALSE;
+    if (seconds == 0) {
+        print_text_centered(160, 70, "^ PRESS START TO BEGIN ^");
     }
-    // Timers for menu alpha text and the main menu itself
-    if (sTextBaseAlpha < 250) {
-        sTextBaseAlpha += 10;
+    if (seconds == 1) {
+        print_text_centered(160, 70, "");
     }
-    if (sMainMenuTimer < 1000) {
-        sMainMenuTimer++;
+    if (seconds == 2) {
+        seconds = 0;
+        mseconds = 0;
     }
 }
 

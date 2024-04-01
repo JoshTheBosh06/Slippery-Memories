@@ -19,7 +19,11 @@
                 "${workspaceFolder}/include/level_commands.h",
                 "${workspaceFolder}/include/segment_symbols.h",
                 "${workspaceFolder}/include/command_macros_base.h",
-                "${workspaceFolder}/include/object_constants.h"
+                "${workspaceFolder}/include/object_constants.h",
+                "${workspaceFolder}/src/game/object_list_processor.h",
+                "${workspaceFolder}/src/game/interaction.h",
+                "${workspaceFolder}/src/game/level_update.h",
+                "${workspaceFolder}/include/behavior_data.h"
             ],
             "defines": [
                 "TARGET_N64=1",
@@ -27,7 +31,8 @@
                 "F3DEX_GBI_2=1",
                 "F3DZEX_NON_GBI_2=1",
                 "F3DEX_GBI_SHARED=1",
-                "LIBPL=1"
+                "NON_MATCHING=1",
+                "AVOID_UB=1"
             ],
             "compilerPath": "/usr/bin/mips-linux-gnu-gcc",
             "cStandard": "gnu17",

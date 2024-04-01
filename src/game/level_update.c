@@ -1,3 +1,4 @@
+#include "texscroll.h"
 #include <ultra64.h>
 
 #include "sm64.h"
@@ -33,6 +34,8 @@
 #include "level_commands.h"
 
 #include "config.h"
+#include "src/game/hud.h"
+#include "src/game/print.h"
 
 // TODO: Make these ifdefs better
 const char *credits01[] = { "1GAME DIRECTOR", "SHIGERU MIYAMOTO" };
@@ -176,23 +179,26 @@ u16 level_control_timer(s32 timerOp) {
 u32 pressed_pause(void) {
     u32 dialogActive = get_dialog_id() >= 0;
     u32 intangible = (gMarioState->action & ACT_FLAG_INTANGIBLE) != 0;
-
-#ifdef PUPPYPRINT_DEBUG
-#ifdef BETTER_REVERB
-    if (sPPDebugPage == PUPPYPRINT_PAGE_RAM || sPPDebugPage == PUPPYPRINT_PAGE_LEVEL_SELECT || sPPDebugPage == PUPPYPRINT_PAGE_BETTER_REVERB) {
-#else
-    if (sPPDebugPage == PUPPYPRINT_PAGE_RAM || sPPDebugPage == PUPPYPRINT_PAGE_LEVEL_SELECT) {
-#endif
-        return FALSE;
+    if (gPlayer1Controller->buttonPressed == START_BUTTON) {
+        if (gCurrLevelNum == LEVEL_BOB) {
+            initiate_warp(LEVEL_BOB, 0x01, 0x0A, 0);
+            timerFracSecsr = 0;
+            timerMinsr = 0;
+            timerSecsr = 0;
+        }
+        if (gCurrLevelNum == LEVEL_WF) {
+            initiate_warp(LEVEL_WF, 0x01, 0x0A, 0);
+            timerFracSecs64 = 0;
+            timerMins64 = 0;
+            timerSecs64 = 0;
+        }
+        if (gCurrLevelNum == LEVEL_JRB) {
+            initiate_warp(LEVEL_JRB, 0x01, 0x0A, 0);
+            timerFracSecsRH = 0;
+            timerMinsRH = 0;
+            timerSecsRH = 0;
+        }
     }
-#endif
-
-    if (!intangible && !dialogActive && !gWarpTransition.isActive && sDelayedWarpOp == WARP_OP_NONE
-        && (gPlayer1Controller->buttonPressed & START_BUTTON)) {
-        return TRUE;
-    }
-
-    return FALSE;
 }
 
 void set_play_mode(s16 playMode) {
@@ -1174,7 +1180,7 @@ s32 update_level(void) {
 
     switch (sCurrPlayMode) {
         case PLAY_MODE_NORMAL:
-            changeLevel = play_mode_normal();
+            changeLevel = play_mode_normal(); scroll_textures();
             break;
         case PLAY_MODE_PAUSED:
             changeLevel = play_mode_paused();
@@ -1352,6 +1358,9 @@ s32 lvl_set_current_level(UNUSED s16 initOrUpdate, s32 levelNum) {
     sWarpCheckpointActive = FALSE;
     gCurrLevelNum = levelNum;
     gCurrCourseNum = gLevelToCourseNumTable[levelNum - 1];
+	if (gCurrLevelNum == LEVEL_JRB) return 0;
+	if (gCurrLevelNum == LEVEL_WF) return 0;
+	if (gCurrLevelNum == LEVEL_BOB) return 0;
 
     if (gCurrDemoInput != NULL || gCurrCreditsEntry != NULL || gCurrCourseNum == COURSE_NONE) {
         return FALSE;

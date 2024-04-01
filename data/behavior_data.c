@@ -6078,4 +6078,140 @@ const BehaviorScript bhvIntroScene[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvFallingPlatformSMB1[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_COLLISION_DATA(falling_platform_smb1_collision),
+    BEGIN_LOOP(),
+        CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(falling_platform_smb1_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTimerObj[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BEGIN_LOOP(),
+        CALL_NATIVE(timer_obj_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvNoteblock[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_COLLISION_DATA(noteblock_collision),
+    SET_HOME(),
+    BEGIN_LOOP(),
+        CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(noteblock_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvRetroPipeSFX[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(play_pipe_sound_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvPrPlant[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(pr_plant_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvSpringBottom[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_COLLISION_DATA(spring_bottom_collision),
+    BEGIN_LOOP(),
+        CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(spring_obj_bot),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvSpringSpring[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(spring_obj_spring),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvSpringTop[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_COLLISION_DATA(spring_top_collision),
+    BEGIN_LOOP(),
+        CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(spring_obj_top),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvSpringUG[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(spring_obj_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvCastleWarp[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(castle_warp),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTimerObj1[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BEGIN_LOOP(),
+        CALL_NATIVE(timer_obj_2_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTimerObj2[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BEGIN_LOOP(),
+        CALL_NATIVE(timer_obj_3_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTitleScreenMenuHandler[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(title_screen_warp_handler),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvEndScreenStrings[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(end_screen_scores),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTitleBgMesh[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bg_title_mesh),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvRedKoopa[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_LONG(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    BEGIN_LOOP(),
+        CALL_NATIVE(red_koopa_loop),
+    END_LOOP(),
+};
 

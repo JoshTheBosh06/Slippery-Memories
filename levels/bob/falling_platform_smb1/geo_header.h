@@ -1,0 +1,9 @@
+extern const GeoLayout falling_platform_smb1_geo[];
+extern u8 falling_platform_smb1__535_ci4[];
+extern u8 falling_platform_smb1__535_pal_rgba16[];
+extern Vtx falling_platform_smb1_falling_platform_smb1_mesh_layer_1_vtx_cull[8];
+extern Vtx falling_platform_smb1_falling_platform_smb1_mesh_layer_1_vtx_0[24];
+extern Gfx falling_platform_smb1_falling_platform_smb1_mesh_layer_1_tri_0[];
+extern Gfx mat_falling_platform_smb1_f3dlite_material[];
+extern Gfx mat_revert_falling_platform_smb1_f3dlite_material[];
+extern Gfx falling_platform_smb1_falling_platform_smb1_mesh_layer_1[];

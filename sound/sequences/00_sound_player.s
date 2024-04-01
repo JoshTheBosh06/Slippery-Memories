@@ -2796,6 +2796,8 @@ sound_ref .sound_general_grand_star
 sound_ref .sound_general_grand_star_jump
 sound_ref .sound_general_boat_rock
 sound_ref .sound_general_vanish_sfx
+sound_ref .sound_general_retro_pipe
+sound_ref .sound_general_retro_spring
 sound_ref .sound_menu_enter_hole
 sound_ref .sound_general_red_coin
 sound_ref .sound_general_birds_fly_away
@@ -4392,6 +4394,26 @@ layer_transpose 1
 .layer_1AEB:
 layer_portamento 0x81, 19, 255
 layer_note1 31, 0x32, 115
+layer_end
+
+.sound_general_retro_pipe:
+chan_setbank 9
+chan_setinstr 7
+chan_setlayer 0, .layer_1AEC
+chan_end
+
+.layer_1AEC:
+layer_note1 39, 0x66, 127
+layer_end
+
+.sound_general_retro_spring:
+chan_setbank 9
+chan_setinstr 8
+chan_setlayer 0, .layer_1AED
+chan_end
+
+.layer_1AED:
+layer_note1 39, 0x66, 127
 layer_end
 
 .channel4_table:

@@ -1878,23 +1878,15 @@ void check_lava_boost(struct MarioState *m) {
 }
 
 void pss_begin_slide(UNUSED struct MarioState *m) {
-    if (!(gHudDisplay.flags & HUD_DISPLAY_FLAG_TIMER)) {
-        level_control_timer(TIMER_CONTROL_SHOW);
-        level_control_timer(TIMER_CONTROL_START);
-        sPssSlideStarted = TRUE;
-    }
+    final1 = 1;
 }
 
 void pss_end_slide(struct MarioState *m) {
-    //! This flag isn't set on death or level entry, allowing double star spawn
-    if (sPssSlideStarted) {
-        u16 slideTime = level_control_timer(TIMER_CONTROL_STOP);
-        if (slideTime < 630) {
-            m->marioObj->oBehParams = (1 << 24);
-            spawn_default_star(-6358.0f, -4300.0f, 4700.0f);
-        }
-        sPssSlideStarted = FALSE;
-    }
+    final = 1;
+}
+
+void end_game_collision(struct MarioState *m) {
+    final2 = 1;
 }
 
 void mario_handle_special_floors(struct MarioState *m) {
@@ -1921,6 +1913,9 @@ void mario_handle_special_floors(struct MarioState *m) {
 
             case SURFACE_TIMER_END:
                 pss_end_slide(m);
+                break;
+            case SURFACE_END_GAME:
+                end_game_collision(m);
                 break;
         }
 

@@ -278,4 +278,34 @@ extern const Gfx title_screen_bg_dl_end[];
 extern const Texture *const mario_title_texture_table[];
 extern const Texture *const game_over_texture_table[];
 
+extern u8 bg_title_end_240p_rgba16[];
+extern Vtx bg_title_Plane_mesh_layer_1_vtx_cull[8];
+extern Vtx bg_title_Plane_mesh_layer_1_vtx_0[696];
+extern Gfx bg_title_Plane_mesh_layer_1_tri_0[];
+extern Gfx mat_bg_title_f3dlite_material_001[];
+extern Gfx mat_revert_bg_title_f3dlite_material_001[];
+extern Gfx bg_title_Plane_mesh_layer_1[];
+
+
+extern u8 logoSLP_BrickBlock_ci4[];
+extern u8 logoSLP_BrickBlock_pal_rgba16[];
+extern u8 logoSLP_B_mokume_white22_i8[];
+extern u8 logoSLP_LawnA2_i8[];
+extern Vtx logoSLP_Slippery_Memories_mesh_layer_1_vtx_cull[8];
+extern Vtx logoSLP_Slippery_Memories_mesh_layer_1_vtx_0[249];
+extern Gfx logoSLP_Slippery_Memories_mesh_layer_1_tri_0[];
+extern Vtx logoSLP_Slippery_Memories_mesh_layer_1_vtx_1[288];
+extern Gfx logoSLP_Slippery_Memories_mesh_layer_1_tri_1[];
+extern Vtx logoSLP_Slippery_Memories_mesh_layer_1_vtx_2[575];
+extern Gfx logoSLP_Slippery_Memories_mesh_layer_1_tri_2[];
+extern Gfx mat_logoSLP_SMBBRICK_003[];
+extern Gfx mat_revert_logoSLP_SMBBRICK_003[];
+extern Gfx mat_logoSLP_SunshineWood_003[];
+extern Gfx mat_revert_logoSLP_SunshineWood_003[];
+extern Gfx mat_logoSLP_GalaxyTexture_003[];
+extern Gfx mat_revert_logoSLP_GalaxyTexture_003[];
+extern Gfx logoSLP_Slippery_Memories_mesh_layer_1[];
+
+
+
 #endif // TEXTURES_H

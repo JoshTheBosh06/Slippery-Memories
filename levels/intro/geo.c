@@ -34,7 +34,7 @@ const GeoLayout intro_geo_splash_screen[] = {
          GEO_OPEN_NODE(),
             GEO_CAMERA(CAMERA_MODE_NONE, 0, 0, 3200, 0, 0, 0, 0x00000000),
             GEO_OPEN_NODE(),
-               GEO_ASM(0, geo_intro_super_mario_64_logo),
+              // GEO_ASM(0, geo_intro_super_mario_64_logo),
 #if defined(FLOOMBAS) && defined(INTRO_FLOOMBAS)
                GEO_RENDER_OBJ(),
 #endif
@@ -43,7 +43,7 @@ const GeoLayout intro_geo_splash_screen[] = {
       GEO_CLOSE_NODE(),
       GEO_ZBUFFER(0),
       GEO_OPEN_NODE(),
-         GEO_ASM(0, geo_intro_tm_copyright),
+         //GEO_ASM(0, geo_intro_tm_copyright),
       GEO_CLOSE_NODE(),
    GEO_CLOSE_NODE(),
    GEO_END(),
@@ -59,7 +59,7 @@ const GeoLayout intro_geo_mario_head_regular[] = {
          GEO_OPEN_NODE(),
             GEO_ASM(0, geo_intro_regular_backdrop),
 #ifdef GODDARD_EASTER_EGG
-            GEO_ASM(0, geo_intro_face_easter_egg),
+            //GEO_ASM(0, geo_intro_face_easter_egg),
 #endif
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
@@ -93,9 +93,9 @@ const GeoLayout intro_geo_mario_head_dizzy[] = {
       GEO_OPEN_NODE(),
          GEO_NODE_ORTHO(100),
          GEO_OPEN_NODE(),
-            GEO_ASM(0, geo_intro_gameover_backdrop),
+          //  GEO_ASM(0, geo_intro_gameover_backdrop),
 #ifdef GODDARD_EASTER_EGG
-            GEO_ASM(0, geo_intro_face_easter_egg),
+           // GEO_ASM(0, geo_intro_face_easter_egg),
 #endif
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),

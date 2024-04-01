@@ -17,3 +17,17 @@
 #include "levels/bob/seesaw_platform/geo.inc.c"
 #include "levels/bob/grate_door/geo.inc.c"
 #include "levels/bob/areas/1/geo.inc.c"
+
+#include "levels/bob/falling_platform_smb1/geo.inc.c"
+#include "levels/bob/geo.inc.c"
+
+#include "levels/bob/noteblock/geo.inc.c"
+#include "levels/bob/s_noteblock/geo.inc.c"
+#include "levels/bob/b_noteblock/geo.inc.c"
+#include "levels/bob/prplant_mouthopen/geo.inc.c"
+#include "levels/bob/prplant_mouthclosed/geo.inc.c"
+#include "levels/bob/spring_bottom/geo.inc.c"
+#include "levels/bob/spring_spring/geo.inc.c"
+#include "levels/bob/spring_top/geo.inc.c"
+#include "levels/bob/red_koopa_1/geo.inc.c"
+#include "levels/bob/red_koopa_2/geo.inc.c"

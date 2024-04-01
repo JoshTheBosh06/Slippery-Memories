@@ -540,5 +540,21 @@ extern const BehaviorScript bhvEndBirds1[];
 extern const BehaviorScript bhvEndBirds2[];
 extern const BehaviorScript bhvIntroScene[];
 extern const BehaviorScript bhvUnusedFakeStar[];
+extern const BehaviorScript bhvFallingPlatformSMB1[];
+extern const BehaviorScript bhvTimerObj[];
+extern const BehaviorScript bhvNoteblock[];
+extern const BehaviorScript bhvRetroPipeSFX[];
+extern const BehaviorScript bhvPrPlant[];
+extern const BehaviorScript bhvSpringBottom[];
+extern const BehaviorScript bhvSpringSpring[];
+extern const BehaviorScript bhvSpringTop[];
+extern const BehaviorScript bhvSpringUG[];
+extern const BehaviorScript bhvCastleWarp[];
+extern const BehaviorScript bhvTimerObj1[];
+extern const BehaviorScript bhvTimerObj2[];
+extern const BehaviorScript bhvTitleScreenMenuHandler[];
+extern const BehaviorScript bhvEndScreenStrings[];
+extern const BehaviorScript bhvTitleBgMesh[];
+extern const BehaviorScript bhvRedKoopa[];
 
 #endif // BEHAVIOR_DATA_H

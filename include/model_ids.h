@@ -67,6 +67,7 @@
 #define MODEL_WF_TOWER_SQUARE_PLATORM          0x2D        // wf_geo_000B10
 #define MODEL_WF_TOWER_SQUARE_PLATORM_UNUSED   0x2E        // wf_geo_000B38 - unused & duplicated
 #define MODEL_WF_TOWER_SQUARE_PLATORM_ELEVATOR 0x2F        // wf_geo_000B60 - elevator platorm
+#define MODEL_BG_TITLE_MESH                    0x30
 
 // Level model IDs
 
@@ -111,6 +112,17 @@
 #define MODEL_BOB_CHAIN_CHOMP_GATE             0x36        // bob_geo_000440
 #define MODEL_BOB_SEESAW_PLATFORM              0x37        // bob_geo_000458
 #define MODEL_BOB_BARS_GRILLS                  0x38        // bob_geo_000470
+#define MODEL_FALLING_PLATFORM_SMB1            0x39
+#define MODEL_NOTEBLOCK                        0x3A
+#define MODEL_SPECIAL_NOTEBLOCK                0x3B
+#define MODEL_BLUE_NOTEBLOCK                   0x3C
+#define MODEL_PR_PLANT_MOUTHCLOSED_UG          0x3D
+#define MODEL_PR_PLANT_MOUTHOPEN_UG            0x3E
+#define MODEL_SPRING_TOP                       0x3F
+#define MODEL_SPRING_SPRING                    0x40
+#define MODEL_SPRING_BOTTOM                    0x41
+#define MODEL_KOOPA_RED_1                      0x42
+#define MODEL_KOOPA_RED_2                      0x43
 
 // sl
 #define MODEL_SL_SNOW_TRIANGLE                 0x36        // sl_geo_000390

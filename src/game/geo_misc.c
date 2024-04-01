@@ -160,6 +160,90 @@ Gfx *geo_exec_cake_end_screen(s32 callContext, struct GraphNode *node, UNUSED Ma
     Gfx *displayList = NULL;
     Gfx *displayListHead = NULL;
 
+    // Retro
+    print_text_fmt_int(135, 125, "%d", timerMinsr);
+    print_text_fmt_int(155, 125, "%02d", timerSecsr);
+
+    switch (ranksr) {
+        case 0:
+            print_text(245, 125, "S");
+            break;
+        case 1:
+            print_text(245, 125, "A");
+            break;
+        case 2:
+            print_text(245, 125, "B");
+            break;
+        case 3:
+            print_text(245, 125, "C");
+            break;
+        case 4:
+            print_text(245, 125, "D");
+            break;
+        case 5:
+            print_text(245, 125, "E");
+            break;
+        case 6:
+            print_text(245, 125, "F");
+            break;
+    }
+
+    // 64 to Galaxy
+    print_text_fmt_int(135, 92, "%d", timerMins64);
+    print_text_fmt_int(155, 92, "%02d", timerSecs64);
+
+    switch (ranks64) {
+        case 0:
+            print_text(245, 92, "S");
+            break;
+        case 1:
+            print_text(245, 92, "A");
+            break;
+        case 2:
+            print_text(245, 92, "B");
+            break;
+        case 3:
+            print_text(245, 92, "C");
+            break;
+        case 4:
+            print_text(245, 92, "D");
+            break;
+        case 5:
+            print_text(245, 92, "E");
+            break;
+        case 6:
+            print_text(245, 92, "F");
+            break;
+    }
+
+    // Romhack Mix
+    print_text_fmt_int(135, 61, "%d", timerMinsRH);
+    print_text_fmt_int(155, 61, "%02d", timerSecsRH);
+
+    switch (ranksRH) {
+        case 0:
+            print_text(245, 61, "S");
+            break;
+        case 1:
+            print_text(245, 61, "A");
+            break;
+        case 2:
+            print_text(245, 61, "B");
+            break;
+        case 3:
+            print_text(245, 61, "C");
+            break;
+        case 4:
+            print_text(245, 61, "D");
+            break;
+        case 5:
+            print_text(245, 61, "E");
+            break;
+        case 6:
+            print_text(245, 61, "F");
+            break;
+    }
+
     if (callContext == GEO_CONTEXT_RENDER) {
         displayList = alloc_display_list(3 * sizeof(*displayList));
         displayListHead = displayList;

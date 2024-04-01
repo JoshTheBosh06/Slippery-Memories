@@ -576,3 +576,20 @@ extern struct WaterDropletParams gShallowWaterSplashDropletParams;
 extern struct WaterDropletParams gShallowWaterWaveDropletParams;
 
 #endif // BEHAVIOR_ACTIONS_H
+
+void falling_platform_smb1_loop(void);
+void timer_obj_loop(void);
+void noteblock_loop(void);
+void play_pipe_sound_loop(void);
+void pr_plant_loop(void);
+void spring_obj_top(void);
+void spring_obj_spring(void);
+void spring_obj_bot(void);
+void spring_obj_loop(void);
+void castle_warp(void);
+void timer_obj_2_loop(void);
+void timer_obj_3_loop(void);
+void title_screen_warp_handler(void);
+void end_screen_scores(void);
+void bg_title_mesh(void);
+void red_koopa_loop(void);

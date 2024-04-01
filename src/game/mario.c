@@ -32,7 +32,29 @@
 #include "save_file.h"
 #include "sound_init.h"
 #include "rumble_init.h"
+u8 final;
+u8 final1;
+u8 final2;
 
+// Retro Level
+ u16 timerMinsr;
+ u16 timerSecsr;
+ u16 timerFracSecsr;
+ u8 ranksr;
+ u8 x;
+ u8 index;
+
+// 64 and onward
+ u16 timerMins64;
+ u16 timerSecs64;
+ u16 timerFracSecs64;
+ u8 ranks64;
+
+// Romhack level
+ u16 timerMinsRH;
+ u16 timerSecsRH;
+ u16 timerFracSecsRH;
+ u8 ranksRH;
 
 /**************************************************
  *                    ANIMATIONS                  *
