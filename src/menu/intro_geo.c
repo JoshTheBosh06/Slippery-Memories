@@ -194,8 +194,7 @@ Gfx *geo_intro_regular_backdrop(s32 callContext, struct GraphNode *node, UNUSED 
         dlIter = dl;
         SET_GRAPH_NODE_LAYER(graphNode->node.flags, LAYER_OPAQUE);
         gSPDisplayList(dlIter++, &dl_proj_mtx_fullscreen);
-        gSPDisplayList(dlIter++, &bg_title_Plane_mesh_layer_1);
-        gSPDisplayList(dlIter++, &logoSLP_Slippery_Memories_mesh_layer_1);
+        gSPDisplayList(dlIter++, &title_screen_bg_dl_start);
         for (i = 0; i < 12; ++i) {
             gSPDisplayList(dlIter++, intro_backdrop_one_image(i, backgroundTable));
         }
