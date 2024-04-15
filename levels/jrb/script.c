@@ -59,7 +59,7 @@ const LevelScript level_jrb_entry[] = {
 		WARP_NODE(0xF0, LEVEL_JRB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		WARP_NODE(0xF1, LEVEL_JRB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_NONE, -3484, -1889, -4070, 0, 0, 0, 0x00000000, bhvTimerObj2),
-		OBJECT(MODEL_NONE, 1251, 18372, 1370, 0, -130, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, 797, 18184, 1223, 0, -130, 0, 0x000A0000, bhvInstantActiveWarp),
 		MARIO_POS(0x01, -130, 1251, 18292, 1370),
 		TERRAIN(jrb_area_1_collision),
 		MACRO_OBJECTS(jrb_area_1_macro_objs),

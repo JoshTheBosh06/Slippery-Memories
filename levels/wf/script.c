@@ -79,7 +79,7 @@ const LevelScript level_wf_entry[] = {
 		WARP_NODE(0xF1, LEVEL_WF, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		MARIO_POS(0x01, 70, -997, 18366, 21018),
 		OBJECT(MODEL_NONE, -3484, -1889, -4070, 0, 0, 0, 0x00000000, bhvTimerObj1),
-		OBJECT(MODEL_NONE, -997, 18460, 21018, 0, 70, 0, 0x000A0000, bhvSpinAirborneWarp),
+		OBJECT(MODEL_NONE, -895, 18396, 21078, 0, 70, 0, 0x000A0000, bhvInstantActiveWarp),
 		TERRAIN(wf_area_1_collision),
 		MACRO_OBJECTS(wf_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_SPOOKY),
